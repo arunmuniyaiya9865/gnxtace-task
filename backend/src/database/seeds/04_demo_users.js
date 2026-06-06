@@ -16,7 +16,7 @@
 
 // bcrypt hash of 'Password@123' (rounds=10) — pre-computed to avoid bcrypt dependency in seed
 const DEMO_PASSWORD_HASH =
-  '$2b$10$Y5tz3U2L1J9u/CWMkfrxMObheZFEaB1sGqnp2JiH8t.qxXvXTelZG';
+  '$2b$10$MA.E4GPZ7nW9DnluL5rPzOSZbOTbh9911laotbwKVSru8YuIMhJDa';
 
 exports.seed = async function (knex) {
   // ── Insert demo users ───────────────────────────────────────────────────────
