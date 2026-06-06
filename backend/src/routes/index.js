@@ -12,6 +12,7 @@ const { Router } = require('express');
 const healthRouter = require('./health.routes');
 const authRouter = require('./auth.routes');
 const projectRouter = require('./project.routes');
+const taskRouter = require('./task.routes');
 
 const router = Router();
 
@@ -21,5 +22,6 @@ const router = Router();
 router.use('/health', healthRouter);
 router.use('/auth', authRouter);
 router.use('/projects', projectRouter);
+router.use('/tasks', taskRouter);
 
 module.exports = router;
