@@ -1,0 +1,9 @@
+# services/
+#
+# Why this folder exists:
+# Services contain business logic. They orchestrate calls to one or more
+# repositories, apply rules, and return plain data objects.
+# Services are testable in isolation because they don't touch Express or HTTP.
+#
+# Naming convention: <module>.service.js
+# Example: auth.service.js, project.service.js

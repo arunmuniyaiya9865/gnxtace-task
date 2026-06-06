@@ -1,0 +1,10 @@
+# repositories/
+#
+# Why this folder exists:
+# Repositories are the only layer that talks to the database (via Knex).
+# They contain raw SQL / query builder calls and return plain JavaScript objects.
+# This isolates DB concerns — if you ever switch from MySQL to PostgreSQL,
+# only this folder changes.
+#
+# Naming convention: <module>.repository.js
+# Example: user.repository.js, project.repository.js

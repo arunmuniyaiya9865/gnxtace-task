@@ -1,0 +1,12 @@
+# migrations/
+#
+# Why this folder exists:
+# Knex migrations are versioned database schema changes stored as timestamped files.
+# They allow the entire team to keep their database schema in sync via:
+#   npm run migrate
+#
+# Each migration file exports an `up` function (apply change) and a `down`
+# function (rollback). Never edit a migration after it has been run in production.
+#
+# Generate a new migration:
+#   knex migrate:make create_users_table --knexfile src/config/knexfile.js

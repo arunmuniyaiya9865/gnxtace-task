@@ -1,0 +1,38 @@
+# docker-compose.yml
+#
+# Why this file exists:
+# Provides a portable MySQL 8 instance for local development so every developer
+# gets the exact same database version and configuration without installing MySQL
+# manually. The database files are persisted in a named Docker volume so data
+# survives container restarts.
+#
+# Usage:
+#   docker-compose up -d       → start MySQL in the background
+#   docker-compose down        → stop containers
+#   docker-compose down -v     → stop containers AND delete database volume
+
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: gnxtace_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: gnxtace_db
+      MYSQL_USER: gnxtace_user
+      MYSQL_PASSWORD: gnxtace_pass
+    ports:
+      - '3306:3306'         # Maps host port 3306 → container port 3306
+    volumes:
+      - mysql_data:/var/lib/mysql   # Named volume → data persists across restarts
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-u', 'root', '-pyourpassword']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_data:
+    driver: local

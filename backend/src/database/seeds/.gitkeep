@@ -1,0 +1,12 @@
+# seeds/
+#
+# Why this folder exists:
+# Seeds populate the database with initial or test data.
+# Unlike migrations, seeds are not versioned — they can be re-run.
+# Useful for loading roles, permission definitions, or demo data during dev.
+#
+# Run all seeds:
+#   npm run seed
+#
+# Generate a new seed:
+#   knex seed:make 01_roles --knexfile src/config/knexfile.js

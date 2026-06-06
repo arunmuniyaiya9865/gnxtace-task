@@ -1,0 +1,9 @@
+# controllers/
+#
+# Why this folder exists:
+# Controllers are the HTTP layer. They receive req, validate input,
+# call a service, and send back the response using apiResponse helpers.
+# Controllers never talk to the database directly — that's the repository's job.
+#
+# Naming convention: <module>.controller.js
+# Example: auth.controller.js, project.controller.js
