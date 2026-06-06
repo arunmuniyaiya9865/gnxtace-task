@@ -17,7 +17,7 @@
 
 ---
 
-## 2. Features Fully Completed ✅
+## 2. Features Fully Completed 
 
 ### Backend
 
@@ -34,18 +34,18 @@
 
 | Feature | Status |
 |---------|--------|
-| Login page (email + password → stores JWT) | ✅ Done (uncommitted) |
-| Dashboard page (project + task counts) | ✅ Done (uncommitted) |
-| Projects page (list, create, inline edit) | ✅ Done (uncommitted) |
-| Tasks page (list, create, status update) | ✅ Done (uncommitted) |
-| ProtectedRoute component (auth guard) | ✅ Done (uncommitted) |
-| RootLayout with navbar + logout | ✅ Done (uncommitted) |
-| Router with all pages wired | ✅ Done (uncommitted) |
-| API service layer (auth, project, task) | ✅ Done (uncommitted) |
+| Login page (email + password → stores JWT) |  Done (uncommitted) |
+| Dashboard page (project + task counts) |  Done (uncommitted) |
+| Projects page (list, create, inline edit) |  Done (uncommitted) |
+| Tasks page (list, create, status update) |  Done (uncommitted) |
+| ProtectedRoute component (auth guard) |  Done (uncommitted) |
+| RootLayout with navbar + logout |  Done (uncommitted) |
+| Router with all pages wired | Done (uncommitted) |
+| API service layer (auth, project, task) |  Done (uncommitted) |
 
 ---
 
-## 3. Features Partially Completed ⚠️
+## 3. Features Partially Completed 
 
 | Feature | Status | Notes |
 |---------|--------|-------|
@@ -54,7 +54,7 @@
 
 ---
 
-## 4. Features Not Yet Started ❌
+## 4. Features Not Yet Started 
 
 | Feature | Priority |
 |---------|----------|
@@ -110,7 +110,7 @@ M  frontend/src/router/index.jsx                   ← all routes wired
 3. Ran a one-time script to update existing DB rows (`UPDATE users SET password_hash = ...`)
 4. Verified: `bcrypt.compare('Password@123', new_hash) → true`
 
-**Status: ✅ RESOLVED** — Login works end-to-end.
+**Status:  RESOLVED** — Login works end-to-end.
 
 ---
 
@@ -170,7 +170,7 @@ M  frontend/src/router/index.jsx                   ← all routes wired
 
 ---
 
-## 9. Backend Status — ✅ COMPLETE
+## 9. Backend Status —  COMPLETE
 
 ### File inventory (43 files)
 
@@ -207,7 +207,7 @@ cd backend && npm run dev    # nodemon on port 5000
 
 ---
 
-## 10. Frontend Status — ✅ FUNCTIONAL (uncommitted)
+## 10. Frontend Status —  FUNCTIONAL (uncommitted)
 
 ### File inventory (20 files)
 
@@ -243,24 +243,24 @@ cd frontend && npm run dev   # Vite on port 5173
 
 ---
 
-## 11. Authentication / Login Status — ✅ WORKING
+## 11. Authentication / Login Status —  WORKING
 
 | Component | Status |
 |-----------|--------|
-| JWT access token (HS256, configurable expiry) | ✅ |
-| Refresh token (UUID → SHA-256 hashed → stored in DB) | ✅ |
-| Token rotation on refresh | ✅ |
-| httpOnly cookie for refresh token | ✅ |
-| Axios interceptor auto-attaches Bearer token | ✅ |
-| 401 interceptor clears token + redirects to /login | ✅ |
-| bcrypt password hashing | ✅ (hash was fixed) |
-| Soft-disable accounts (is_active flag) | ✅ |
+| JWT access token (HS256, configurable expiry) |  |
+| Refresh token (UUID → SHA-256 hashed → stored in DB) |  |
+| Token rotation on refresh |  |
+| httpOnly cookie for refresh token |  |
+| Axios interceptor auto-attaches Bearer token |  |
+| 401 interceptor clears token + redirects to /login |  |
+| bcrypt password hashing |  (hash was fixed) |
+| Soft-disable accounts (is_active flag) |  |
 
 ---
 
 ## 12. APIs — Completed vs Pending
 
-### ✅ Completed (13 endpoints)
+###  Completed (13 endpoints)
 
 | Method | Endpoint | Permission | Module |
 |--------|----------|------------|--------|
@@ -280,7 +280,7 @@ cd frontend && npm run dev   # Vite on port 5173
 | PUT | `/api/tasks/:id` | `tasks:update` | Tasks |
 | PATCH | `/api/tasks/:id/status` | `tasks:update` | Tasks |
 
-### ❌ Pending APIs
+###  Pending APIs
 
 | Endpoint | Module | Priority |
 |----------|--------|----------|
