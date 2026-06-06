@@ -17,6 +17,7 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
+const cookieParser = require('cookie-parser');
 
 const { CORS_ORIGIN } = require('./config/env');
 const requestLogger = require('./middleware/requestLogger');
@@ -40,6 +41,10 @@ app.use(
 // ─── Body Parsers ─────────────────────────────────────────────────────────────
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// ─── Cookie Parser ────────────────────────────────────────────────────────────
+// Required to read httpOnly refresh token cookies in auth routes
+app.use(cookieParser());
 
 // ─── HTTP Request Logging ─────────────────────────────────────────────────────
 app.use(requestLogger);

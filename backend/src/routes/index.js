@@ -10,14 +10,15 @@
 
 const { Router } = require('express');
 const healthRouter = require('./health.routes');
+const authRouter = require('./auth.routes');
 
 const router = Router();
 
 // ─── Module Routes ────────────────────────────────────────────────────────────
 // Register new feature routers here as the platform grows:
-// e.g. router.use('/auth', require('./auth.routes'));
 // e.g. router.use('/projects', require('./project.routes'));
 
 router.use('/health', healthRouter);
+router.use('/auth', authRouter);
 
 module.exports = router;
